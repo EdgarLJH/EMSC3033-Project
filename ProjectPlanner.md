@@ -1,21 +1,20 @@
 # EMSC4033 project plan template
 
-## Project title
+## Quantifying spatial relationships and geodesic distances to pre-specific lithospheric depths
 
 ## Executive summary
 
 
-This project aims to provide a python file which helps the user measure geodesic distances between coordianates of Earth features and a pre-defined lithospheric depth. This will be presented on GitHub in a user-friendly manner. 
-
-In one to two sentences, explain the background, the broad goals of the project and what the specific outcomes will be.
+Geodesic distances between pairs of coordinates can be evaluated through statistical tests to quantify the statistical robustness of their relationships. In this project, I plan to create a GitHub repository that includes 1) drawn lithospheric depthc contours, 2) geodesic distances between coordinate data and the contours, 3) statistical tests of these spatial relationships. 
 
 **Example:** _(this is based on the seismic monitoring dashboard that Louis showed). Seismic stations can be used to monitor human noise over the course of the day. Some seismometers stream data live to a server and so this processing can be done in near-real time. In this project I plan to build an online dashboard which processes the data once a day and uploads the results to github as 1) raw data, 2) an image that can be embedded in websites, 3) an updating csv table in github. I also plan to use the github "actions" engine to provide all the necessary processing power._
 
 ## Goals
 
-- Goal 1
-- Goal 2
-- ...
+- Draw contours which represent the surface projection of a pre-defined lithospheric depth (using SL2013sv and LITHO1.0).
+- Measure the closest distances for each coordinate pair to the depth contours and present these as cumulative distribution fuctions (CDFs).
+- Perform two-sample Kolmogorov-Smirnov (K-S) tests to assess these relationships.
+- Explain the advantages of using my code. 
 
 (Write things that you can assess whether they have been accomplished. For example, a goal like “improve visualisation of ocean output” is vague... But a goal that reads “implement functionality to plot streamlines of horizontal velocities in various slices from 3D ocean output” is specific enough.)
 
