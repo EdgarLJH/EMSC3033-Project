@@ -1,24 +1,26 @@
 # EMSC4033 project plan template
 
-## Quantifying spatial relationships and geodesic distances to pre-specific lithospheric depths
+## Quantifying spatial relationships of ore deposits and lithospheric depths
 
 ## Executive summary
 
-
-Geodesic distances between pairs of coordinates can be evaluated through statistical tests to quantify the statistical robustness of their relationships. In this project, I plan to create a GitHub repository that includes 1) drawn lithospheric depthc contours, 2) geodesic distances between coordinate data and the contours, 3) statistical tests of these spatial relationships. 
+Recent studies have revealed that several mineral systems show general spatial associations with plate and craton margins. However, the quantitative assessment of these relationships are not well established. In this project, I plan to write a Jupyter notebook that performs geodesic distance calculations and the relevant quantitative tests and upload the results to GitHub as 1) raw data, 2) a notebook that displays results, 3) python scripts with documented functions, 4) a sample input, 5) tests.
 
 **Example:** _(this is based on the seismic monitoring dashboard that Louis showed). Seismic stations can be used to monitor human noise over the course of the day. Some seismometers stream data live to a server and so this processing can be done in near-real time. In this project I plan to build an online dashboard which processes the data once a day and uploads the results to github as 1) raw data, 2) an image that can be embedded in websites, 3) an updating csv table in github. I also plan to use the github "actions" engine to provide all the necessary processing power._
 
 ## Goals
 
-- Draw contours which represent the surface projection of a pre-defined lithospheric depth (using SL2013sv and LITHO1.0).
-- Measure the closest distances for each coordinate pair to the depth contours and present these as cumulative distribution fuctions (CDFs).
-- Perform two-sample Kolmogorov-Smirnov (K-S) tests to assess these relationships.
-- Explain the advantages of using my code. 
+- Draw contours which represent the surface projection of a pre-defined lithospheric depth (based on SL2013sv and LITHO1.0 models).
+- Calculate the geodesic distance between each deposit point and the nearest contour and present as cumulative distribution functions (CDFs).
+- Perform two-sample kolmogorov-Smirnov (K-S) tests to assess spatial correlations. Results displayed graphically
+- Compare between results of both models
+- Present well-documented functions that are easy to use. 
 
 (Write things that you can assess whether they have been accomplished. For example, a goal like “improve visualisation of ocean output” is vague... But a goal that reads “implement functionality to plot streamlines of horizontal velocities in various slices from 3D ocean output” is specific enough.)
 
 ## Background and Innovation  
+
+Initial ground selection is arguably the most crucial aspect of mineral exploration, as failure to initially identify fertile regions results in waste of all future financial input (McCuaig, Beresford and Hronsky, 2010). Recent exploration methods have endeavoured to resolve this challenge by considering a more holistic perspective to identify prospective regions and draw relationships between mineralisation and its underlying tectonic and plate-scale processes (Huston et al., 2016). This approach is guided by the understanding that ore deposits are small-scale expressions of a variety of Earth processes that operate on different spatial and temporal scales (McCuaig, Beresford and Hronsky, 2010). Mineral systems that are active and geologically young are generally associated with plate and craton margins, both spatially and genetically (Huston et al., 2016). Even deposits from the geological past commonly occur at sites that host former crustal boundaries (Huston et al., 2016). By establishing the first-order geological controls that govern the spatiotemporal distribution of these mineral systems, the predictive power for identifying fertile regions can be increased substantially.
 
 _Give more details on the scientific problem that you are working on and how this project will advance the discipline or help with your own research.
 (Where applicable, describe how people have been achieving this goal up to now, talk about existing packages, their limitations, whether you can generalise something to help other people use your code)._
@@ -40,3 +42,8 @@ _What do you have at your disposal already that will help the project along. Did
 
 _Provide some specific tests with values that you can imagine `assert`ing_
 
+## References 
+
+Huston, D. L. et al. (2016) ‘Tectono-metallogenic systems — The place of mineral systems within tectonic evolution, with an emphasis on Australian examples’, Ore Geology Reviews, 76(September 2015), pp. 168–210. doi: 10.1016/j.oregeorev.2015.09.005.
+
+McCuaig, T. C., Beresford, S. and Hronsky, J. (2010) ‘Translating the mineral systems approach into an effective exploration targeting system’, Ore Geology Reviews, 38(3), pp. 128–138. doi: 10.1016/j.oregeorev.2010.05.008.
