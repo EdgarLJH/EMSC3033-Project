@@ -4,7 +4,11 @@
 
 ## Executive summary
 
-Recent studies have revealed that several mineral systems show general spatial associations with plate and craton margins. However, the quantitative assessment of these relationships are not well established. In this project, I plan to write a Jupyter notebook that performs geodesic distance calculations and the relevant quantitative tests and upload the results to GitHub as 1) raw data, 2) a notebook that displays results, 3) python scripts with documented functions, 4) a sample input, 5) tests.
+Recent studies have revealed that several mineral systems show general spatial associations with plate and craton margins. However, the quantitative assessment of these relationships are not well established. In this project, I plan to write a Jupyter notebook that performs geodesic distance calculations and the relevant quantitative tests and upload the results to GitHub as:
+1) raw data 
+2) a sample notebook displaying output 
+3) python scripts with documented functions
+4) tests
 
 **Example:** _(this is based on the seismic monitoring dashboard that Louis showed). Seismic stations can be used to monitor human noise over the course of the day. Some seismometers stream data live to a server and so this processing can be done in near-real time. In this project I plan to build an online dashboard which processes the data once a day and uploads the results to github as 1) raw data, 2) an image that can be embedded in websites, 3) an updating csv table in github. I also plan to use the github "actions" engine to provide all the necessary processing power._
 
