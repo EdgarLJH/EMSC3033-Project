@@ -14,7 +14,7 @@ Recent studies have revealed that several mineral systems show general spatial a
 
 ## Goals
 
-- Draw contours which represent the surface projection of a pre-defined lithospheric depth (based on SL2013sv and LITHO1.0 models).
+- Draw contours which represent the surface projection of a pre-defined lithospheric depth (based on various seismic tomography models).
 - Calculate the geodesic distance between each deposit point and the nearest contour and present as cumulative distribution functions (CDFs).
 - Perform two-sample kolmogorov-Smirnov (K-S) tests to assess spatial correlations. Results displayed graphically
 - Compare between results of both models
