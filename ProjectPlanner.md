@@ -33,7 +33,7 @@ _Give more details on the scientific problem that you are working on and how thi
 
 ## Resources & Timeline
 
-- Several LAB models will be used and compared against one another. These are SL2013sv (Schaeffer & Lebedev, 2013), LITHO1.0 (Pasyanos et al., 2014), A2006 (Artemieva, 2006) and LithoRef18 (Afonso et al., 2019).
+- Several LAB models will be used and compared against one another. These are SL2013sv (Schaeffer & Lebedev, 2013), LITHO1.0 (Pasyanos et al., 2014), A06 (Artemieva, 2006) and LithoRef18 (Afonso et al., 2019).
 - The project will be written in Python code on Jupyter.
 - Contours and geodesic distances will be calculated using the Python interface of Generic Mapping Tools (GMT) - PyGMT.
 - Statistical tests will be conducted using the existing Scipy package.
