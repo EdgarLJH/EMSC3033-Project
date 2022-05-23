@@ -14,7 +14,7 @@ Recent studies have revealed that several mineral systems show general spatial a
 
 ## Goals
 
-- Draw contours which represent the surface projection of a pre-defined lithospheric depth (based on various seismic tomography models).
+- Draw contours which represent the surface projection of a pre-defined lithospheric depth (based on various models of the lithosphere-asthenosphere boundary, LAB).
 - Calculate the geodesic distance between each deposit point and the nearest contour and present as cumulative distribution functions (CDFs).
 - Perform two-sample kolmogorov-Smirnov (K-S) tests to assess spatial correlations. Results displayed graphically
 - Compare between results of both models
@@ -33,7 +33,7 @@ _Give more details on the scientific problem that you are working on and how thi
 
 ## Resources & Timeline
 
-- Several seismic tomography models will be used and compared against one another. These are SL2013sv, LITHO1.0, A2006 and Afonso2019.
+- Several LAB models will be used and compared against one another. These are SL2013sv (Schaeffer & Lebedev, 2013), LITHO1.0 (Pasyanos et al., 2014), A2006 (Artemieva, 2006) and LithoRef18 (Afonso et al., 2019).
 - The project will be written in Python code on Jupyter.
 - Contours and geodesic distances will be calculated using the Python interface of Generic Mapping Tools (GMT) - PyGMT.
 - Statistical tests will be conducted using the existing Scipy package.
@@ -58,6 +58,14 @@ _Provide some specific tests with values that you can imagine `assert`ing_
 
 ## References 
 
-Huston, D. L. et al. (2016) ‘Tectono-metallogenic systems — The place of mineral systems within tectonic evolution, with an emphasis on Australian examples’, Ore Geology Reviews, 76(September 2015), pp. 168–210. doi: 10.1016/j.oregeorev.2015.09.005.
+Afonso, J. C., F. Salajegheh, W. Szwillus, J. Ebbing, & C. Gaina (2019). A global reference model of the lithosphere and upper mantle from joint inversion and analysis of multiple data sets. _Geophysical Journal International_, 217, 1602–1628.
 
-McCuaig, T. C., Beresford, S. and Hronsky, J. (2010) ‘Translating the mineral systems approach into an effective exploration targeting system’, Ore Geology Reviews, 38(3), pp. 128–138. doi: 10.1016/j.oregeorev.2010.05.008.
+Artemieva, I. M. (2006). Global 1 x 1 thermal model TC1 for the continental lithosphere: Implications for lithosphere secular evolution. _Tectonophysics_, 416, 245–277.
+
+Huston, D. L., T. P. Mernagh, M. P. Doublier, M. Fiorentini, D. C. Champion, A. L. Jaques, K. Czarnota, R. Cayley, R. Skirrow & E. Bastrakov (2016). Tectono-metallogenic systems — The place of mineral systems within tectonic evolution, with an emphasis on Australian examples. _Ore Geology Reviews_, 76, 168-210. 
+
+McCuaig, T. C., S. Beresford, & J. Hronsky (2010). Translating the mineral systems approach into an effective exploration targeting system. _Ore Geology Reviews_, 38(3), 128-138. 
+
+Pasyanos, M. E., T. G. Masters, G. Laske, & Z. Ma (2014). LITHO1.0: An updated crust and lithospheric model of the Earth. _Journal of Geophysical Research: Solid Earth_, 119, 2153–2173.
+
+Schaeffer, A. J. & S. Lebedev (2013). Global shear speed structure of the upper mantle and transition zone. _Geophysical Journal International_, 194, 417–449.
