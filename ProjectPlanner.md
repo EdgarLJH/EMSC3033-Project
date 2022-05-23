@@ -26,10 +26,20 @@ Recent studies have revealed that several mineral systems show general spatial a
 
 Initial ground selection is arguably the most crucial aspect of mineral exploration, as failure to initially identify fertile regions results in waste of all future financial input (McCuaig, Beresford and Hronsky, 2010). Recent exploration methods have endeavoured to resolve this challenge by considering a more holistic perspective to identify prospective regions and draw relationships between mineralisation and its underlying tectonic and plate-scale processes (Huston et al., 2016). This approach is guided by the understanding that ore deposits are small-scale expressions of a variety of Earth processes that operate on different spatial and temporal scales (McCuaig, Beresford and Hronsky, 2010). Mineral systems that are active and geologically young are generally associated with plate and craton margins, both spatially and genetically (Huston et al., 2016). Even deposits from the geological past commonly occur at sites that host former crustal boundaries (Huston et al., 2016). By establishing the first-order geological controls that govern the spatiotemporal distribution of these mineral systems, the predictive power for identifying fertile regions can be increased substantially.
 
+The process of identifying depth contours, calculating geodesic distances an performing statistical tests can also be completed using basic functions in Python. However, the main limitation of this approach is its considerably lengthy runtime. Therefore, my code will generalise the use of specialised packages so that people can input their own data of choice without necessarily the need to understand fully the underlying workings of the code.
+
 _Give more details on the scientific problem that you are working on and how this project will advance the discipline or help with your own research.
 (Where applicable, describe how people have been achieving this goal up to now, talk about existing packages, their limitations, whether you can generalise something to help other people use your code)._
 
 ## Resources & Timeline
+
+- Several seismic tomography models will be used and compared against one another. These are SL2013sv, LITHO1.0, A2006 and Afonso2019.
+- The project will be written in Python code on Jupyter.
+- Contours and geodesic distances will be calculated using the Python interface of Generic Mapping Tools (GMT) - PyGMT.
+- Statistical tests will be conducted using the existing Scipy package.
+
+This project has been a work in progress for the last few weeks and is on track to be completed in the time available. It will be important for future personal use, so I intend to continually update the repository to reflect more efficient and presentable improvements.
+
 
 _What do you have at your disposal already that will help the project along. Did you convince somebody else to help you ? Are there already some packages you can build upon. What makes it possible to do this project in the time available. Do you intend to continue this project in the future ?_
 
