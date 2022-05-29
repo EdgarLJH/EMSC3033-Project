@@ -35,7 +35,6 @@ def random_points(deposit_data, n):
     while len(arronshore) < len(deposit_data) * n:
         lons = random.uniform(-180, 180)
         lats = random.uniform(-90, 90)
-        print(lons, lats)
         arrrandom = np.append(arrrandom, np.array([[lons, lats]]), axis = 0)
         
         # If loop to determine onshore and offshore coordinates
