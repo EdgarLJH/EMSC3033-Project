@@ -103,19 +103,18 @@ def labmap(x, y, color_data, grid, series_lab, series_data, title, label):
     grid is the LAB map as a netCDF.
     series_lab and series_data are tuples of limits for LAB and data, respectively.
     '''
-    fig = pygmt.Figure()
     pygmt.makecpt(cmap="polar", series=series_lab, reverse = True)
-    fig.grdimage(grid=grid, projection="N?", frame='f', region = 'd')
-    fig.coast(shorelines = "1/0.01,black")
+    pygmt.Figure().grdimage(grid=grid, projection="N?", frame='f', region = 'd')
+    pygmt.Figure().coast(shorelines = "1/0.01,black")
     pygmt.makecpt(cmap="rainbow", series=series_data, reverse = True)
-    fig.plot(x=x, 
-             y=y, 
-             color=color_data,
-             cmap = True,
-             style="c0.08c",
-             pen="black")
-    fig.text(position = "TL", text = label, font = "14p", pen = "black")
-    fig.text(position="TR", text=title, font = "8p")
+    pygmt.Figure().plot(x=x, 
+                        y=y, 
+                        color=color_data,
+                        cmap = True,
+                        style="c0.08c",
+                        pen="black")
+    pygmt.Figure().text(position = "TL", text = label, font = "14p", pen = "black")
+    pygmt.Figure().text(position="TR", text=title, font = "8p")
 
     
     
