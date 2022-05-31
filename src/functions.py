@@ -4,7 +4,6 @@
   - get_cdf()
   - get_std()
   - ks2()
-  - labmap()
   - plot_cdf()
   - plot_hist_d()
   - plot_violin_p()
@@ -93,28 +92,6 @@ def ks2(data1, data2, n):
         lower += int(len(data2) / n)
         upper += int(len(data2) / n)
     return np.array([d, p])
-
-  
-  
-def labmap(x, y, color_data, grid, series_lab, series_data, title, label):
-    '''
-    Plot data points on a selected LAB map. 
-    x and y are arrays of data longitude and latitude, respectively.
-    grid is the LAB map as a netCDF.
-    series_lab and series_data are tuples of limits for LAB and data, respectively.
-    '''
-    pygmt.makecpt(cmap="polar", series=series_lab, reverse = True)
-    pygmt.Figure().grdimage(grid=grid, projection="N?", frame='f', region = 'd')
-    pygmt.Figure().coast(shorelines = "1/0.01,black")
-    pygmt.makecpt(cmap="rainbow", series=series_data, reverse = True)
-    pygmt.Figure().plot(x=x, 
-                        y=y, 
-                        color=color_data,
-                        cmap = True,
-                        style="c0.08c",
-                        pen="black")
-    pygmt.Figure().text(position = "TL", text = label, font = "14p", pen = "black")
-    pygmt.Figure().text(position="TR", text=title, font = "8p")
 
     
     
