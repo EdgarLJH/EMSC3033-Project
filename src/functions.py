@@ -4,6 +4,7 @@
   - get_cdf()
   - get_std()
   - ks2()
+  - labmap()
   - plot_cdf()
   - plot_hist_d()
   - plot_violin_p()
@@ -44,6 +45,28 @@ def random_points(deposit_data, n):
             arroffshore = np.append(arroffshore, np.array([[lons, lats]]), axis = 0)
     return arrrandom, arronshore, arroffshore
 
+  
+  
+def labmap(x, y, color_data, grid, series_lab, series_data, title, label):
+    '''
+    Plot data points on a selected LAB map. 
+    x and y are arrays of data longitude and latitude, respectively.
+    grid is the LAB map as a netCDF.
+    series_lab and series_data are tuples of limits for LAB and data, respectively.
+    '''
+    pygmt.makecpt(cmap="polar", series=series_lab, reverse = True)
+    fig.grdimage(grid=grid, projection="N?", frame='f', region = 'd')
+    fig.coast(shorelines = "1/0.01,black")
+    pygmt.makecpt(cmap="rainbow", series=series_data, reverse = True)
+    fig.plot(x=x, 
+             y=y, 
+             color=color_data,
+             cmap = True,
+             style="c0.08c",
+             pen="black")
+    fig.text(position = "TL", text = label, font = "14p", pen = "black")
+    fig.text(position="TR", text=title, font = "8p")
+    
   
 
 def get_cdf(data):
