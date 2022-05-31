@@ -7,16 +7,16 @@
 Recent studies have revealed that several mineral systems show general spatial associations with plate and craton margins. However, the quantitative assessment of these relationships are not well established. In this project, I plan to write a Jupyter notebook that performs geodesic distance calculations and the relevant quantitative tests and upload the results to GitHub as:
 1) raw data 
 2) a sample notebook displaying output 
-3) python scripts with documented functions
+3) python scripts with documented functions and dependencies
 4) tests
 
 ## Goals
 
-- Draw contours which represent the surface projection of a pre-defined lithospheric depth (based on various models of the lithosphere-asthenosphere boundary, LAB).
+- Generate contours which represent the surface projection of a pre-defined lithospheric depth (based on various models of the lithosphere-asthenosphere boundary, LAB).
 - Calculate the geodesic distance between each deposit point and the nearest contour and present as cumulative distribution functions (CDFs).
 - Perform two-sample kolmogorov-Smirnov (K-S) tests to assess spatial correlations. Results displayed graphically
-- Compare between results of both models
-- Present well-documented functions that are easy to use. 
+- Compare results of the different LAB maps
+- Generalise notebook for easy-use by the public. 
 
 ## Background and Innovation  
 
@@ -29,7 +29,7 @@ The process of identifying depth contours, calculating geodesic distances an per
 - Several LAB models will be used and compared against one another. These models are each derived from upper-mantle shear wave tomography (Schaeffer & Lebedev, 2013), surface wave tomography (Pasyanos et al., 2014), surface heat flow measurements (Artemieva, 2006) and  joint inversion of seismic, potential field and geochemical data (Afonso et al., 2019).
 - The project will be written in Python code on Jupyter.
 - Contours and geodesic distances will be calculated using the Python interface of Generic Mapping Tools (GMT) - PyGMT.
-- Statistical tests will be conducted using the existing Scipy package.
+- Statistical tests will be conducted using the existing Scipy package and a combination of numpy functions.
 
 This project has been a work in progress for the last few weeks and is on track to be completed in the time available. It will be important for upcoming research, so I intend to continually update the repository to reflect improvements in efficiency and presentation.
 
@@ -37,8 +37,8 @@ This project has been a work in progress for the last few weeks and is on track 
 
 **Tests**
 - The correct number of random locations are generated.
-- The correct columns from datasets are called when calculating geodesic distances.
-- CDF has a minimum value of 0 and maximum value of 100.
+- Correct input file types for get_cdf and get_std functions. 
+- The correct length of data is used as argument for the K-S test. 
 
 ## References 
 
