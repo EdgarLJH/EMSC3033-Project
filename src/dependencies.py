@@ -11,6 +11,5 @@ import pygmt
 import matplotlib
 import matplotlib.pyplot as plt
 
-from matplotlib import colorbar, colors
 from global_land_mask import globe
 from scipy import stats
