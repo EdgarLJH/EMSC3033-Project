@@ -28,7 +28,39 @@ The *src* (source) folder contains all the "inner-workings" of the *Quantitative
 
 #### Tests
 
+#### .ll files
+Longitudes and latitudes calculated by PyGMT functions are dumped into these various ASCII files.
+
+#### LAB_maps.jpg & CDFs.jpg
+The final product of the _Quantitative_analysis.ipynb_ notebook (maps and statistical figures) are saved as JPEG files. The file type can be easily changed by the user.
+
 ## Quantitative_analysis Notebook Guide
+
+#### User Input
+The user need only to specify a lithospheric depth, z, in km and provide an ASCII data file as the main input of the notebook. 
+
+#### Workflow
+After the user has provided a lithospheric depth, z, and input data file, the notebook proceeds to:
+
+1. Import netCDF LAB maps
+2. Sort the data into a plottable array
+3. Generate 100 CDFs of random onshore locations - random_points()
+4. Project a contour line over lithospheric thickness z and dump coordinates into an ASCII file - pygmt.Figure().grdcontour
+5. Determine the closest approach for each data point to a contour line and dump as an ASCII file - gmt mapproject
+6. For each LAB map, generate CDFs for data and random locations - get_cdf()
+7. Calculate standard deviations for the random locations for every LAB map - get_std()
+8. Calculate D and p-values for each LAB map - ks2()
+9. Project data points on each LAB map
+10. For every LAB map, produce cumulative frequency graphs, D-value histograms and p-value violin plots
+
+#### Final Map and Figures
+Robinson projection LAB maps are produced using grid data processed by PyGMT (thinnest lithosphere in red and thickest in blue). The  arrays of data points produced earlier (step 2) are used to plot the locations of the data on these maps. 
+
+The cumulative frequencies for distances to contours from data and random locations are displayed as a graph. A vertical line denoting the user-defined contour depth is illustrated as a dot-dash line. The standard deviations of random locations are also shown on the graph along with the mean and the raw number of data points. These graphs ultimately tells us the percentage of data points that can be found within a certain distance from the LAB contour. 
+
+Histograms are used to display D-value sets calculated from the two-sample K-S tests. Means and standard deviations are annotated on the top-right corner of each figure. 
+
+Corresponding p-values are as violin plots. The x-limits are standard across all plots for easy comparison by the user. A small p-value suggests that the two CDFs are selected from populations of different distributions and the spatial relationship between the data and the particular lithospheric thickness is significant. 
 
 ## References
 
