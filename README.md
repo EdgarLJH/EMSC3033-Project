@@ -27,6 +27,11 @@ The *src* (source) folder contains all the "inner-workings" of the *Quantitative
 *functions.py* contains various functions that conducts the workflow of the notebook. Lengthy or repeatedly-used code are written as functions to minimise the length of the main notebook. This file is called at the beginning of the notebook.
 
 #### Tests
+Test functions and Pytest are used to ensure that the functions operate as intended. Four test functions are provided for:
+1. random_points(): Ensure taht the correct number of random locations are generated
+2. get_cdf(): Appropriate bin intervals are used 
+3. get_std(): Appropriate bin intervals are used
+4. ks2(): size of data1 is a factor n of the size of data2
 
 #### .ll files
 Longitudes and latitudes calculated by PyGMT functions are dumped into these various ASCII files.
