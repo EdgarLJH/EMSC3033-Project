@@ -41,8 +41,6 @@ The final product of the _Quantitative_analysis.ipynb_ notebook (maps and statis
 
 ## Quantitative_analysis Notebook Guide
 
-#### PyGMT
-
 #### User Input
 The user need only to specify a lithospheric depth, z, in km and provide an ASCII data file as the main input of the notebook. 
 
