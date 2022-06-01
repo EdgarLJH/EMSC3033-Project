@@ -37,7 +37,7 @@ This project has been a work in progress for the last few weeks and is on track 
 
 **Tests**
 - The correct number of random locations are generated.
-- Correct input file types for get_cdf and get_std functions. 
+- Suitable bin intervals are used for get_cdf and get_std functions. 
 - The correct length of data is used as argument for the K-S test. 
 
 ## References 
