@@ -1,6 +1,6 @@
 # EMSC4033 - Project Report 
 
-The aim of this project was to produce a python notebook that calculates the geodesic distances between a set of coordinates and a pre-defined lithospheric thickness. The statistical significance of this spatial relationship will then be evaluated against random locations using a two-sample Kolmogorov-Smirnov (K-S) test.
+The aim of this project was to produce a python notebook that calculates the geodesic distances between a set of coordinates and a pre-defined lithospheric thickness. The statistical significance of this spatial relationship will then be evaluated against random locations using a two-sample Kolmogorov-Smirnov (K-S) test. Contour extraction and closest approach calculation is performed using the PyGMT package. Documentation for the package is not updated to reflect the latest version and users may find difficulty using some of the relevant functions. Therefore, a secondary objective of this project is to help users experience PyGMT and hopefully understand how to use it. 
 
 ## Instructions
 
