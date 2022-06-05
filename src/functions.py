@@ -27,6 +27,8 @@ these distances.
 def random_points(deposit_data, n):
     '''
     Generate n number of CDFs of random points, each the same size as the deposit data.
+    Random, onshore and offshore points are each stored as arrays of longitude-latitude pairs.
+    Returns a concatenated list of the three arrays (index 0: random, index 1: onshore, index 2: ofsshore)
     '''   
     arrrandom = np.empty((0, 2))
     arronshore = np.empty((0, 2))
@@ -49,6 +51,7 @@ def random_points(deposit_data, n):
 def get_cdf(data, bin_interval):
     '''
     Calculate cumulative distribution function (CDF) and probability density function (PDF) for a set of data.
+    Returns a concatenated list of index 0: cdf, index 1: pdf and index 2: histogram bins
     '''
     count, bins_count = np.histogram(data, bins = np.arange(0, max(data), bin_interval))
     pdf = count / sum(count)
@@ -60,6 +63,7 @@ def get_cdf(data, bin_interval):
 def get_std(data, bin_interval):
     '''
     Calculate standard deviation for a set of data. 
+    Returns an array of float values.
     '''
     sort_dist = np.sort(data)
     bins = np.arange(0, max(sort_dist), bin_interval)
@@ -79,6 +83,8 @@ def ks2(data1, data2, n):
     2-sample Kolmogorov-Smirnov test comparing data1 to multiple data2 CDFs. 
     data1: Data CDF
     data2: n number of CDFs of random locations
+    D- and p-values are each stored as individual arrays.
+    Returns a concatenated array of both arrays (index 0: D-values, index 1: p-values)
     '''
     d = np.empty((0))
     p = np.empty((0))
@@ -98,6 +104,7 @@ def ks2(data1, data2, n):
 def plot_cdf(data_deposit, data_random, std_random, ax, title, z):
     '''
     Plot CDF of geodesic distances.
+    Returns axes.
     '''
     ax.axvline(x = z, color = "black", linestyle = "-.") # Show contour line
     ax.plot(data_deposit[2][0:-1], 100 * data_deposit[0], color = "C1", 
@@ -124,6 +131,7 @@ def plot_cdf(data_deposit, data_random, std_random, ax, title, z):
 def plot_hist_d(data, ax):
     '''
     Plot histogram of D-values.
+    Returns axes
     '''
     ax.hist(data, bins = np.arange(round(min(data), 2) - 0.01, round(max(data), 2) + 0.01, 0.01), 
             color = "black", edgecolor = "white", linewidth = 1.2)
